@@ -7,11 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  wait-job:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7, 3.8, 3.9]
-
+    steps:
+      - name: Sleep for 60 minutes
+        run: sleep 3600
